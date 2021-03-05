@@ -8,7 +8,7 @@ import createSagaMiddleware from "redux-saga";
 
 import "./index.css";
 import App from "./App";
-import registerServiceWorker from "./registerServiceWorker";
+import * as serviceWorker from './serviceWorker';
 import burgerBuilderReducer from "./store/reducers/burgerBuilder";
 import orderReducer from "./store/reducers/order";
 import authReducer from "./store/reducers/auth";
@@ -45,4 +45,4 @@ const app = (
 );
 
 ReactDOM.render(app, document.getElementById("root"));
-registerServiceWorker();
+serviceWorker.unregister();
