@@ -47,7 +47,7 @@ const Auth = props => {
         if (!buildingBurger && authRedirectPath !== '/') {
             onSetAuthRedirectPath();
         }
-    }, [burgerBuilder, authRedirectPath, onSetAuthRedirectPath]);
+    }, [buildingBurger, authRedirectPath, onSetAuthRedirectPath]);
 
     const inputChangedHandler = (event, controlName) => {
         const updatedControls = updateObject(authForm, {
